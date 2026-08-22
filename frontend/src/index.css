@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-paper text-ink font-body bg-grain;
+  background-size: 18px 18px;
+}
+
+.font-display {
+  font-feature-settings: "ss01" on;
+}
+
+/* Passport-stamp badge used for itinerary stops (signature element) */
+.stamp-badge {
+  @apply relative flex items-center justify-center rounded-full border-2 border-dashed;
+  border-color: currentColor;
+  width: 3.25rem;
+  height: 3.25rem;
+  transform: rotate(-4deg);
+}
+
+.stamp-badge::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px solid currentColor;
+  border-radius: 9999px;
+  opacity: 0.5;
+}
+
+/* Perforated-edge card, like a torn ticket */
+.ticket-card {
+  position: relative;
+  clip-path: polygon(
+    0% 6px, 6px 0%, calc(100% - 6px) 0%, 100% 6px,
+    100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0% calc(100% - 6px)
+  );
+}
+
+.route-line {
+  background-image: linear-gradient(to right, #2F6E5E 50%, transparent 50%);
+  background-size: 10px 2px;
+  background-repeat: repeat-x;
+  height: 2px;
+}
