@@ -20,7 +20,7 @@ export default function Dashboard() {
       {/* Full-screen Background Image Overlay */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         <img
-          src="/hero-map.jpg"
+          src="d1.jpg"
           alt="Dashboard Background"
           className="w-full h-full object-cover"
         />
@@ -207,7 +207,7 @@ export default function Dashboard() {
 
             {/* Quick Links */}
 
-            
+
             <div>
               <h4 className="font-semibold text-slate-900 text-xs uppercase tracking-wider mb-3">Quick Navigation</h4>
               <ul className="space-y-2 text-xs">

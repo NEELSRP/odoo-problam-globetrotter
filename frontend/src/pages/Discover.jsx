@@ -26,7 +26,7 @@ export default function Discover() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=2000&auto=format&fit=crop')`,
+            backgroundImage: `url('https://picsum.photos/seed/globetrotter/2000/1200')`,
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-sky-50/90 via-slate-50/95 to-slate-50" />

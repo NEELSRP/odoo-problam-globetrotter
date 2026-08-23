@@ -1,4 +1,5 @@
 from fastapi import APIRouter, Depends, Query
+from sqlalchemy import or_
 from sqlalchemy.orm import Session
 
 from app.core.database import get_db
@@ -12,7 +13,9 @@ router = APIRouter(prefix="/api", tags=["discover"])
 def search_cities(q: str | None = Query(default=None), country: str | None = None, db: Session = Depends(get_db)):
     query = db.query(City)
     if q:
-        query = query.filter(City.name.ilike(f"%{q}%"))
+        query = query.filter(
+            or_(City.name.ilike(f"%{q}%"), City.country.ilike(f"%{q}%"))
+        )
     if country:
         query = query.filter(City.country.ilike(f"%{country}%"))
     return query.order_by(City.popularity.desc()).all()

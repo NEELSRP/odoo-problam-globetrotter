@@ -21,13 +21,13 @@ export default function MyTrips() {
 
       {/* Light Background Overlay */}
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+                <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=2000&auto=format&fit=crop')`,
-          }}
+          backgroundImage: `url('/d1.jpg')`,
+}}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-sky-50/90 via-slate-50/95 to-slate-50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-sky-50/60 via-slate-50/70 to-slate-50/90" />
       </div>
 
       <div className="relative z-10">
